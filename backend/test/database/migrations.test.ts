@@ -15,7 +15,7 @@ test('migrations are recorded and can run more than once', () => {
   }>
   assert.deepStrictEqual(
     migrations.map(({ id }) => id),
-    ['001_migration_tracking', '002_service_reference_data']
+    ['001_migration_tracking', '002_service_reference_data', '003_arrival_observations']
   )
 
   database.close()

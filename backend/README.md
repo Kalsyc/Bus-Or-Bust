@@ -29,6 +29,20 @@ Run `npm run seed:261` to validate that fixture and import it into the configure
 database. The operation is transactional and can be safely rerun. It records a sync run and
 preserves both visits to a stop on loop services.
 
+### One-shot arrival observation
+
+After seeding and configuring `LTA_DATAMALL_KEY`, run:
+
+```bash
+npm run observe:261
+```
+
+This makes **one** concurrent, bounded pass over Service 261's 13 unique physical bus stops;
+it is not a polling loop. Each call asks for only Service 261 and writes the complete response,
+including an empty response or request failure, to SQLite. Run it manually while inspecting the
+shape and quality of the live data. A repeating 30-second collector and reliability scoring are
+intentionally out of scope for now.
+
 After seeding, the local API exposes:
 
 - `GET /services/261` for service-level reference data.
@@ -49,8 +63,7 @@ directory. Override that location with `DATABASE_PATH` when needed.
 
 ## Database schema
 
-The database currently holds **reference data**: the relatively stable description of a bus
-service and its stops. It intentionally does not yet store real-time Bus Arrival observations.
+The database holds reference data plus append-only, real-time Bus Arrival observations.
 
 ```text
 bus_services (one row per service direction)
@@ -59,6 +72,10 @@ bus_services (one row per service direction)
 
 reference_sync_runs (audit log of each fixture import)
 schema_migrations    (internal migration history)
+
+arrival_poll_runs (one manual collection pass)
+    └── arrival_polls (one API result per physical stop)
+              └── arrival_predictions (NextBus, NextBus2, NextBus3 for Service 261)
 ```
 
 ### `bus_services`
@@ -112,6 +129,28 @@ It lets us distinguish fresh reference data from stale data without overwriting 
 Managed by the application. Each migration ID from `src/database/migrations.ts` is recorded with
 its `applied_at` timestamp. Do not edit a migration that may already have been applied; add a new
 immutable migration instead.
+
+### Arrival-observation tables
+
+`arrival_poll_runs` records one invocation of `observe:261`: start/end timestamps, requested
+stop count, and successful/failed call counts. It is the unit a future metrics job will use to
+mark a capture range as processed.
+
+`arrival_polls` records every attempted stop request with its collection timestamp, request
+duration, outcome (`success`, `invalid_response`, or `request_failed`), optional error, and the
+original JSON response. The parent relationship is cascading: deleting a poll run deletes its
+polls.
+
+`arrival_predictions` normalizes the populated `NextBus`, `NextBus2`, and `NextBus3` values from
+a successful response. It preserves the estimated arrival time, `Monitored` flag, vehicle
+location, `VisitNumber`, load, accessibility feature, and vehicle type. This lets later analysis
+distinguish location-based ETAs from schedule-based ETAs without having to re-fetch data.
+
+There is **no automatic retention deletion yet**. Once we have validated an arrival-inference
+and metrics workflow, it will process a closed range of poll runs transactionally, retain only
+the derived metrics, and delete those runs. The cascading foreign keys will then remove their raw
+poll JSON and normalized predictions together. Until then, manual one-shot collection prevents
+unbounded storage growth.
 
 ### Reference-data workflow
 

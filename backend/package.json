@@ -16,6 +16,7 @@
     "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js",
     "sync:261": "node --loader ts-node/esm src/commands/sync-service-261.ts",
     "seed:261": "node --loader ts-node/esm src/commands/seed-service-261.ts",
+    "observe:261": "node --loader ts-node/esm src/commands/observe-service-261.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
