@@ -41,7 +41,9 @@ Use `npm run format` and `npm run lint:fix` to apply safe automatic fixes.
 
 ## Configuration
 
-`DATABASE_PATH` must be a non-empty path when supplied.
+`DATABASE_PATH` must be a non-empty path when supplied. To configure the LTA DataMall
+credential, copy `.env.example` to `.env` and set `LTA_DATAMALL_KEY`. The `.env` file is
+ignored by Git and is loaded automatically at startup.
 
 ## Database migrations
 
