@@ -1,0 +1,45 @@
+{
+  "type": "module",
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "main": "app.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "TS_NODE_TRANSPILE_ONLY=1 node --test --experimental-test-coverage --loader ts-node/esm test/*.test.ts test/*/*.test.ts",
+    "start": "npm run build:ts && fastify start -l info dist/app.js",
+    "build:ts": "tsc",
+    "watch:ts": "tsc -w",
+    "dev": "fastify start -l info src/app.ts",
+    "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit && tsc -p test/tsconfig.json --noEmit",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@fastify/swagger": "^9.8.1",
+    "@fastify/swagger-ui": "^6.1.1",
+    "fastify": "^5.0.0",
+    "fastify-cli": "^8.0.0",
+    "fastify-plugin": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.0.3",
+    "c8": "^11.0.0",
+    "concurrently": "^9.0.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "fastify-tsconfig": "^3.0.0",
+    "prettier": "^3.9.6",
+    "ts-node": "^10.4.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.69.0"
+  }
+}
