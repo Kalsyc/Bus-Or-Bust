@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "fetchedAt": "2026-09-05T08:19:22.259Z",
+  "routePageCount": 54,
+  "service": [
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "Category": "FEEDER",
+      "OriginCode": "54009",
+      "DestinationCode": "54009",
+      "AM_Peak_Freq": "03-05",
+      "AM_Offpeak_Freq": "05-07",
+      "PM_Peak_Freq": "04-07",
+      "PM_Offpeak_Freq": "05-09",
+      "LoopDesc": "Ang Mo Kio Ave 10"
+    }
+  ],
+  "routeStops": [
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 1,
+      "BusStopCode": "54009",
+      "Distance": 0,
+      "WD_FirstBus": "0510",
+      "WD_LastBus": "0105",
+      "SAT_FirstBus": "0510",
+      "SAT_LastBus": "0105",
+      "SUN_FirstBus": "0510",
+      "SUN_LastBus": "0105"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 2,
+      "BusStopCode": "54261",
+      "Distance": 0.4,
+      "WD_FirstBus": "0512",
+      "WD_LastBus": "0102",
+      "SAT_FirstBus": "0512",
+      "SAT_LastBus": "0102",
+      "SUN_FirstBus": "0512",
+      "SUN_LastBus": "0102"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 3,
+      "BusStopCode": "54271",
+      "Distance": 0.7,
+      "WD_FirstBus": "0513",
+      "WD_LastBus": "0104",
+      "SAT_FirstBus": "0514",
+      "SAT_LastBus": "0104",
+      "SUN_FirstBus": "0513",
+      "SUN_LastBus": "0104"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 4,
+      "BusStopCode": "54281",
+      "Distance": 1,
+      "WD_FirstBus": "0514",
+      "WD_LastBus": "0105",
+      "SAT_FirstBus": "0515",
+      "SAT_LastBus": "0105",
+      "SUN_FirstBus": "0514",
+      "SUN_LastBus": "0105"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 5,
+      "BusStopCode": "54389",
+      "Distance": 1.5,
+      "WD_FirstBus": "0517",
+      "WD_LastBus": "0107",
+      "SAT_FirstBus": "0517",
+      "SAT_LastBus": "0108",
+      "SUN_FirstBus": "0517",
+      "SUN_LastBus": "0108"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 6,
+      "BusStopCode": "54379",
+      "Distance": 1.9,
+      "WD_FirstBus": "0518",
+      "WD_LastBus": "0109",
+      "SAT_FirstBus": "0519",
+      "SAT_LastBus": "0110",
+      "SUN_FirstBus": "0518",
+      "SUN_LastBus": "0110"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 7,
+      "BusStopCode": "54609",
+      "Distance": 2.3,
+      "WD_FirstBus": "0520",
+      "WD_LastBus": "0111",
+      "SAT_FirstBus": "0521",
+      "SAT_LastBus": "0112",
+      "SUN_FirstBus": "0520",
+      "SUN_LastBus": "0112"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 8,
+      "BusStopCode": "54369",
+      "Distance": 2.6,
+      "WD_FirstBus": "0521",
+      "WD_LastBus": "0112",
+      "SAT_FirstBus": "0523",
+      "SAT_LastBus": "0114",
+      "SUN_FirstBus": "0522",
+      "SUN_LastBus": "0113"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 9,
+      "BusStopCode": "54371",
+      "Distance": 3,
+      "WD_FirstBus": "0523",
+      "WD_LastBus": "0114",
+      "SAT_FirstBus": "0525",
+      "SAT_LastBus": "0116",
+      "SUN_FirstBus": "0524",
+      "SUN_LastBus": "0115"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 10,
+      "BusStopCode": "54381",
+      "Distance": 3.4,
+      "WD_FirstBus": "0525",
+      "WD_LastBus": "0116",
+      "SAT_FirstBus": "0527",
+      "SAT_LastBus": "0118",
+      "SUN_FirstBus": "0526",
+      "SUN_LastBus": "0117"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 11,
+      "BusStopCode": "54289",
+      "Distance": 3.9,
+      "WD_FirstBus": "0527",
+      "WD_LastBus": "0118",
+      "SAT_FirstBus": "0529",
+      "SAT_LastBus": "0120",
+      "SUN_FirstBus": "0528",
+      "SUN_LastBus": "0119"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 12,
+      "BusStopCode": "54279",
+      "Distance": 4.2,
+      "WD_FirstBus": "0528",
+      "WD_LastBus": "0119",
+      "SAT_FirstBus": "0530",
+      "SAT_LastBus": "0121",
+      "SUN_FirstBus": "0530",
+      "SUN_LastBus": "0120"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 13,
+      "BusStopCode": "54269",
+      "Distance": 4.5,
+      "WD_FirstBus": "0530",
+      "WD_LastBus": "0121",
+      "SAT_FirstBus": "0532",
+      "SAT_LastBus": "0123",
+      "SUN_FirstBus": "0531",
+      "SUN_LastBus": "0122"
+    },
+    {
+      "ServiceNo": "261",
+      "Operator": "SBST",
+      "Direction": 1,
+      "StopSequence": 14,
+      "BusStopCode": "54009",
+      "Distance": 4.8,
+      "WD_FirstBus": "0531",
+      "WD_LastBus": "0122",
+      "SAT_FirstBus": "0533",
+      "SAT_LastBus": "0124",
+      "SUN_FirstBus": "0533",
+      "SUN_LastBus": "0123"
+    }
+  ],
+  "busStops": [
+    {
+      "BusStopCode": "54009",
+      "RoadName": "Ang Mo Kio Ave 8",
+      "Description": "Ang Mo Kio Int",
+      "Latitude": 1.36968769913339,
+      "Longitude": 103.84856716193268
+    },
+    {
+      "BusStopCode": "54261",
+      "RoadName": "Ang Mo Kio Ave 3",
+      "Description": "Aft Ang Mo Kio Stn Exit A",
+      "Latitude": 1.36946941916508,
+      "Longitude": 103.85075454495572
+    },
+    {
+      "BusStopCode": "54271",
+      "RoadName": "Ang Mo Kio Ave 3",
+      "Description": "Blk 586",
+      "Latitude": 1.36996326781056,
+      "Longitude": 103.85356664655984
+    },
+    {
+      "BusStopCode": "54281",
+      "RoadName": "Ang Mo Kio Ave 3",
+      "Description": "Blk 570",
+      "Latitude": 1.369694,
+      "Longitude": 103.855165
+    },
+    {
+      "BusStopCode": "54389",
+      "RoadName": "Ang Mo Kio Ave 10",
+      "Description": "Blk 465",
+      "Latitude": 1.36638973614786,
+      "Longitude": 103.85660537812751
+    },
+    {
+      "BusStopCode": "54379",
+      "RoadName": "Ang Mo Kio Ave 10",
+      "Description": "Blk 475",
+      "Latitude": 1.36288998904353,
+      "Longitude": 103.85594804936484
+    },
+    {
+      "BusStopCode": "54609",
+      "RoadName": "Ang Mo Kio Ave 10",
+      "Description": "Opp Townsville Pr Sch",
+      "Latitude": 1.359358,
+      "Longitude": 103.855321
+    },
+    {
+      "BusStopCode": "54369",
+      "RoadName": "Ang Mo Kio Ind Pk 1",
+      "Description": "Opp Blk 4025",
+      "Latitude": 1.35874638898802,
+      "Longitude": 103.85588277797046
+    },
+    {
+      "BusStopCode": "54371",
+      "RoadName": "Ang Mo Kio Ave 10",
+      "Description": "Blk 409 Mkt/FC",
+      "Latitude": 1.36238306289968,
+      "Longitude": 103.85568284134345
+    },
+    {
+      "BusStopCode": "54381",
+      "RoadName": "Ang Mo Kio Ave 10",
+      "Description": "Blk 443",
+      "Latitude": 1.3657416739059,
+      "Longitude": 103.85608617430734
+    },
+    {
+      "BusStopCode": "54289",
+      "RoadName": "Ang Mo Kio Ave 3",
+      "Description": "Blk 452",
+      "Latitude": 1.369149,
+      "Longitude": 103.855987
+    },
+    {
+      "BusStopCode": "54279",
+      "RoadName": "Ang Mo Kio Ave 3",
+      "Description": "Blk 427",
+      "Latitude": 1.36968919033429,
+      "Longitude": 103.85404760550173
+    },
+    {
+      "BusStopCode": "54269",
+      "RoadName": "Ang Mo Kio Ave 3",
+      "Description": "Opp Ang Mo Kio Stn",
+      "Latitude": 1.36921006543476,
+      "Longitude": 103.85111893571647
+    }
+  ]
+}

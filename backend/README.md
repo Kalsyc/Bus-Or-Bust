@@ -16,6 +16,15 @@ Interactive OpenAPI documentation is available at
 [http://localhost:3000/docs](http://localhost:3000/docs). The generated OpenAPI document
 is also available as JSON at `/docs/json` and YAML at `/docs/yaml`.
 
+When `LTA_DATAMALL_KEY` is configured, the `/lta/*` inspection routes call DataMall directly.
+They are for local payload discovery only and do not persist data.
+
+## Service 261 reference snapshot
+
+Run `npm run sync:261` to retrieve all paginated Bus Routes data, select service 261, and
+fetch its Bus Services and Bus Stops records. The command writes a reviewable test fixture to
+`test/fixtures/lta/service-261-reference.json`; it does not write SQLite data.
+
 ### `npm start`
 
 Start the compiled application.
