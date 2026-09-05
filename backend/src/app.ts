@@ -7,6 +7,7 @@ import ltaDataMallPlugin from './plugins/lta-datamall.ts'
 import databaseHealthRoute from './routes/database-health.ts'
 import ltaDataMallRoute from './routes/lta-datamall.ts'
 import rootRoute from './routes/root.ts'
+import servicesRoute from './routes/services.ts'
 
 export type AppOptions = {
   databasePath?: string
@@ -67,6 +68,7 @@ const app: FastifyPluginAsync<AppOptions> = async (fastify, opts): Promise<void>
   await fastify.register(rootRoute)
   await fastify.register(databaseHealthRoute)
   await fastify.register(ltaDataMallRoute)
+  await fastify.register(servicesRoute)
 
   await fastify.register(swaggerUi, {
     routePrefix: '/docs',
