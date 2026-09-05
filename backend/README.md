@@ -38,6 +38,7 @@ npm run check
 ```
 
 Use `npm run format` and `npm run lint:fix` to apply safe automatic fixes.
+Husky runs the same check automatically before every Git commit.
 
 ## Configuration
 
