@@ -11,7 +11,7 @@
     "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "typecheck:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format:check": "prettier --check .",
-    "lint": "eslint .",
+    "lint": "svelte-kit sync && eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "check": "npm run format:check && npm run lint && npm run typecheck",
@@ -45,5 +45,10 @@
   "imports": {
     "#lib": "./src/lib/index.js",
     "#lib/*": "./src/lib/*"
+  },
+  "dependencies": {
+    "@protomaps/basemaps": "^5.7.2",
+    "maplibre-gl": "^6.7.0",
+    "pmtiles": "^4.5.0"
   }
 }
