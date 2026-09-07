@@ -1,1 +1,2 @@
 npm --prefix backend run check
+npm --prefix frontend run check
