@@ -29,7 +29,6 @@
   let mapContainer: HTMLDivElement
   let setSelectedStop: ((stopId: string | null) => void) | undefined
   let mapError = $state<string | null>(null)
-  let mapLoaded = $state(false)
 
   const pmtilesPath = '/singapore-20260907.pmtiles'
 
@@ -106,16 +105,12 @@
 
       map.addControl(new maplibregl.NavigationControl(), 'top-right')
       map.on('error', (event) => {
-        if (!mapLoaded) {
-          mapError = `The map style could not be loaded: ${event.error.message}`
-        }
+        mapError = `The map could not load a resource: ${event.error.message}`
       })
-      map.on('load', () => {
+      map.on('style.load', () => {
         if (!map) {
           return
         }
-
-        mapLoaded = true
 
         map.addSource('service-261-route', {
           type: 'geojson',

@@ -4,6 +4,11 @@ import adapter from '@sveltejs/adapter-vercel'
 import { sveltekit } from '@sveltejs/kit/vite'
 
 export default defineConfig({
+  optimizeDeps: {
+    // MapLibre loads its renderer in a dedicated worker module. Let Vite serve it directly
+    // instead of rewriting that worker through dependency pre-bundling.
+    exclude: ['maplibre-gl']
+  },
   plugins: [
     sveltekit({
       compilerOptions: {
